@@ -1,4 +1,6 @@
 class Api::V1::ApplicationController < Api::ApplicationController
+  respond_to :html, :xml, :json
+  
   RANSACK_DEFAULT_SORT = 'id ASC'.freeze
 
   def self.responder
