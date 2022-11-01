@@ -7,7 +7,7 @@ FactoryBot.define do
     "person#{n}@taskmanager.dbp"
   end
 
-  sequence :expired_at do |n|
+  sequence :expired_at do |_n|
     Date.current
   end
 end

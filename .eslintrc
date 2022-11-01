@@ -17,7 +17,7 @@
   },
   
   "settings": {
-    "import/extensions": [".js", ".jsx"],
+    "import/extensions": [".js", ".jsx"]
   },
   
   "rules": {
@@ -46,4 +46,3 @@
     "react/static-property-placement": 0
     }
   }
-  
