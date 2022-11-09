@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import KanbanBoard from '@asseinfo/react-kanban';
 import { propOr } from 'ramda';
 
-import Task from 'components/Task';
-import TasksRepository from 'repositories/TasksRepository';
+import Task from '../Task/Task';
+import TasksRepository from '../../repositories/TasksRepository';
+import ColumnHeader from '../ColumnHeader/ColumnHeader';
 
 const STATES = [
   { key: 'new_task', value: 'New' },
@@ -41,6 +42,14 @@ function TaskBoard() {
         ...prevState,
         [state]: { cards: data.items, meta: data.meta },
       }));
+    });
+  };
+
+  const loadColumnMore = (state, page = 1, perPage = 10) => {
+    loadColumn(state, page, perPage).then(({ data }) => {
+      
+
+
     });
   };
 
